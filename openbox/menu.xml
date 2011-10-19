@@ -190,17 +190,24 @@
 			</item>
 		</menu>
 		<menu id="network" label="Network">
-		    <item label="Chromium WWW Browser">
+		  <item label="Chromium Browser">
 				<action name="Execute">
 					<execute>
 						chromium-browser
 					</execute>
 				</action>
 			</item>
-			<item label="Chromium WWW Browser (private mode)">
+			<item label="Chromium Browser (private mode)">
 				<action name="Execute">
 					<execute>
 						chromium-browser --incognito
+					</execute>
+				</action>
+			</item>
+		  <item label="Firefox Browser">
+				<action name="Execute">
+					<execute>
+						firefox
 					</execute>
 				</action>
 			</item>
@@ -270,8 +277,8 @@
 		            <execute>
 		                pidgin
 		            </execute>
-		        </action>    
-		    </item>            
+		        </action>
+		    </item>
 		    <item label="VirtualBox">
 				<action name="Execute">
 					<execute>
