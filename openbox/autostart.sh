@@ -77,4 +77,6 @@ cb-setxkbmap-live &
 # gnome-do
 (sleep 20s && gnome-do) &
 
+# config displays
+(sleep 20s && ~/.screenlayout/cb-work.sh) &
 
