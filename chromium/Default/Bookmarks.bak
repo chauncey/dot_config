@@ -1,0 +1,40 @@
+{
+   "checksum": "ec8efefb6aefea397599a38d736598f0",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "12963418752277624",
+            "id": "3",
+            "name": "Microsoft Outlook Web Access",
+            "type": "url",
+            "url": "http://owa.equityins.net:8910/exchange/"
+         }, {
+            "date_added": "12963418758525736",
+            "id": "4",
+            "name": "Helpdesk",
+            "type": "url",
+            "url": "http://helpdesk/cgi-bin/bbw.sh?PGM=HD.PROBLEMFORM.MENU"
+         }, {
+            "date_added": "12963418768981892",
+            "id": "5",
+            "name": "Roundup",
+            "type": "url",
+            "url": "http://tulsadc04:8080/development/issue?status=-1,1,2,3,4,5,6,7,11&@sort=-activity&@search_text=&@dispname=Your%20Issues&@filter=status,assignedto&@group=priority&@columns=id,activity,title,creator,status&assignedto=11&@pagesize=50&@startwith=0"
+         } ],
+         "date_added": "0",
+         "date_modified": "12963418768981892",
+         "id": "1",
+         "name": "Bookmarks Bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "0",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other Bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

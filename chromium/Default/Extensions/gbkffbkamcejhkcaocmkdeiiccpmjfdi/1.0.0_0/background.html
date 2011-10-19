@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="storage.js"></script>
+<script>
+chrome.extension.onRequest.addListener(
+  function(request, sender, sendResponse) {
+    switch (request.msg) {
+      case 'snapshot':
+        chrome.tabs.captureVisibleTab(null, {format:'png'}, function(dataUrl) { 
+          sendResponse({sDataUrl: dataUrl});
+        });
+        break;
+      case 'copy-to-clipboard':
+        var oInput = document.getElementById('copy-to-clipboard');
+        oInput.value = request.text;
+        oInput.select();
+        document.execCommand('copy', false, null);
+        sendResponse({});
+        break;
+      case 'get-shortcuts':
+        sendResponse(window.localStorage.shortcuts);
+        break;
+      case 'toggle-feature-state':
+        toggleFeatureState(request.feature, sender.tab.id);
+        sendResponse({});
+        break;
+      case 'create-tab':
+        createTab(request.page, request.content);
+        sendResponse({});
+      default:
+        sendResponse({});
+    }
+  }
+);
+
+function retrieveOptions() {
+  return JSON.parse(window.localStorage.options);
+}
+
+function createTab(sTabURL, oData) {
+  var port = null;
+  chrome.tabs.getSelected(null, function(tab) {
+    var oCurrentTab = tab;
+    chrome.tabs.create({url: sTabURL, index: oCurrentTab.index+1}, function(tab) {
+      port = chrome.tabs.connect(tab.id);
+      switch (sTabURL) {
+        case 'created-tabs/view-css.html':
+          port.postMessage({
+            sURL: oCurrentTab.url,
+            aEmbeddedCSS: oData.aEmbeddedCSS,
+            aExternalCSS: oData.aExternalCSS
+          });
+          break;
+        case 'created-tabs/show-used-colors.html':
+          port.postMessage({
+            sURL: oCurrentTab.url,
+            aColors: oData.aColors
+          });
+          break;
+        case 'created-tabs/view-images-information.html':
+          port.postMessage({
+            sURL: oCurrentTab.url,
+            aImages: oData.aImages
+          });
+          break;
+        case 'created-tabs/view-javascript.html':
+          port.postMessage({
+            sURL: oCurrentTab.url,
+            aEmbeddedScripts: oData.aEmbeddedScripts,
+            aExternalScripts: oData.aExternalScripts
+          });
+          break;
+        case 'created-tabs/view-source.html':
+          port.postMessage({
+            sURL: oCurrentTab.url,
+            sSource: oData.sSource,
+            sType: oData.sType
+          });
+          break;
+        case 'created-tabs/validate-local-html.html':
+        case 'created-tabs/validate-local-css.html':
+          port.postMessage(oData);
+          break;
+      }
+      port = null;
+    });
+  });
+}
+
+function viewSelectionSource() {
+  return function(info, tab) {
+    chrome.tabs.sendRequest(tab.id, {sMethod: 'getSelectionSource'}, function(oResponse) {
+      createTab('created-tabs/view-source.html', oResponse);
+    });
+  };
+}
+
+chrome.contextMenus.create({
+  'title' : 'View selection source',
+  'type' : 'normal',
+  'contexts' : ['selection'],
+  'onclick' : viewSelectionSource()
+});
+</script>
+</head>
+<body>
+<input id="copy-to-clipboard">
+</body>
+</html>

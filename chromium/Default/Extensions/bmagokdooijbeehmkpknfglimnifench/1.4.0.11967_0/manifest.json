@@ -1,0 +1,24 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "firebug24_disabled.png",
+      "default_title": "Firebug Lite 1.4.0"
+   },
+   "content_scripts": [ {
+      "js": [ "contentScript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Firebug Lite for Google Chrome, supported by the Firebug Working Group.",
+   "icons": {
+      "128": "firebug128.png",
+      "16": "firebug16.png",
+      "32": "firebug32.png",
+      "48": "firebug48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDd+snyqPAR1iN0AmqvjdUnEcZDrb8zHqhqnpYa5yj8H4ER2WqPJ0EXIgkKkrt1sg5EO7ZVRtlrgUmpw4ruU0QtX9E2RINLMg4soczZYTj7O7Fhswb7FmORoXUVz8Jyh3Z9iAwZ34n4uurBEUxUE3FgAjXV5l1Yb81oCcEbaUyTOQIDAQAB",
+   "name": "Firebug Lite for Google Chrome\u2122",
+   "permissions": [ "contextMenus", "tabs", "http://*/*", "https://*/*", "http://127.0.0.1/*", "http://localhost/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.4.0.11967"
+}

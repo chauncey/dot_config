@@ -1,0 +1,26 @@
+{
+   "browser": {
+      "custom_chrome_frame": false
+   },
+   "extensions": {
+      "theme": {
+         "id": "",
+         "use_system": true
+      }
+   },
+   "homepage": "http://www.crunchbanglinux.org/start/",
+   "homepage_is_newtabpage": false,
+   "session": {
+      "restore_on_startup": 4,
+      "urls_to_restore_on_startup": [ "http://crunchbanglinux.org/start/" ]
+   },
+   "webkit": {
+      "webprefs": {
+         "default_fixed_font_size": 13,
+         "default_font_size": 16,
+         "fixed_font_family": "Monospace",
+         "sansserif_font_family": "Sans",
+         "serif_font_family": "Serif"
+      }
+   }
+}

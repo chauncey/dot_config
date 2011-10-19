@@ -1,0 +1,24 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "img/icon19.png",
+      "default_title": "Pendule",
+      "popup": "popup/popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "content_script_top_frame.js" ],
+      "matches": [ "\u003Call_urls\u003E" ]
+   } ],
+   "description": "Web developer tools for Chrome.",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDH0YAB+CMbaWwqKqY9u3OdztX9hLUsh/cFnHS8qwtkite1SfMjcLE809xtsipMj6mekQdygQn59xWCyKVsiI8bYzWkLIX6LNjttUt+dP8F0ZpVLgDjqPVFBka/IBgasIDWSRCn/0E2tf+GN9xnhiERnScH1/lW4bWAXZdObm/c9QIDAQAB",
+   "name": "Pendule",
+   "options_page": "options/options.html",
+   "permissions": [ "tabs", "cookies", "http://*/*", "https://*/*", "contextMenus" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.0"
+}

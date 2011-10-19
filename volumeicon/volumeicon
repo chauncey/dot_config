@@ -1,0 +1,6 @@
+
+[StatusIcon]
+stepsize=5
+lmb_slider=true
+onclick=xfce4-mixer
+theme=Default

@@ -1,0 +1,83 @@
+{
+   "HostReferralList": [ 2, [ "http://277i078hrfrsufqs8hb7kpg5ipvr7nfc-a-fc-opensocial.googleusercontent.com/", [ "http://1.bp.blogspot.com/", 0.16999999999999998, "http://2.bp.blogspot.com/", 0.33999999999999997, "http://csi.gstatic.com/", 0.16999999999999998, "http://twitter.com/", 0.33999999999999997, "http://www-fc-opensocial.googleusercontent.com/", 0.16999999999999998 ] ], [ "http://chauncey.unfuddle.com/", [ "http://www.google-analytics.com/", 0.7120570496 ] ], [ "http://conky.sourceforge.net/", [ "http://apps.sourceforge.net/", 0.6799999999999999, "http://sourceforge.net/", 0.8499999999999999 ] ], [ "http://crunchbanglinux.org/", [ "http://www.google-analytics.com/", 0.919620692350269 ] ], [ "http://elentok.blogspot.com/", [ "http://1.bp.blogspot.com/", 0.16999999999999998, "http://2.bp.blogspot.com/", 0.33999999999999997, "http://3.bp.blogspot.com/", 0.16999999999999998, "http://img1.blogblog.com/", 1.3599999999999997, "http://img2.blogblog.com/", 0.51, "http://themes.googleusercontent.com/", 0.51, "http://www.blogblog.com/", 0.51, "http://www.blogger.com/", 1.6999999999999995, "http://www.google-analytics.com/", 0.16999999999999998, "http://www.google.com/", 2.0399999999999996 ] ], [ "http://github.com/", [ "https://github.com/", 0.22609999999999997 ] ], [ "http://help.github.com/", [ "http://status.github.com/", 0.16999999999999998, "https://github.com/", 0.16999999999999998 ] ], [ "http://r1rk9np7bpcsfoeekl0khkd2juj27q3o-a-fc-opensocial.googleusercontent.com/", [ "http://2.bp.blogspot.com/", 0.16999999999999998, "http://4.bp.blogspot.com/", 0.16999999999999998, "http://csi.gstatic.com/", 0.16999999999999998, "http://www-fc-opensocial.googleusercontent.com/", 0.16999999999999998, "http://www.google.com/", 2.5499999999999994 ] ], [ "http://superuser.com/", [ "http://ajax.googleapis.com/", 0.08499999999999999, "http://cdn.sstatic.net/", 0.5099999999999999, "http://edge.quantserve.com/", 0.08499999999999999, "http://pixel.quantserve.com/", 0.08499999999999999, "http://stackauth.com/", 0.08499999999999999, "http://www.google-analytics.com/", 0.16999999999999998, "http://www.gravatar.com/", 0.08499999999999999 ] ], [ "http://tulsap522.equityins.net/", [ "https://tulsap522.equityins.net/", 0.16999999999999998 ] ], [ "http://ubuntuforums.org/", [ "http://www.google-analytics.com/", 0.33999999999999997, "http://yui.yahooapis.com/", 0.33999999999999997 ] ], [ "http://unfuddle.com/", [ "http://0.marketing.assets.unfuddle.com/", 0.6799999999999999, "http://1.marketing.assets.unfuddle.com/", 1.1899999999999997, "http://2.marketing.assets.unfuddle.com/", 1.0199999999999998, "http://3.marketing.assets.unfuddle.com/", 0.51, "http://www.google-analytics.com/", 0.33999999999999997 ] ], [ "http://wiki.conky.be/", [ "http://i.creativecommons.org/", 0.16999999999999998 ] ], [ "http://www.bitbucket.org/", [ "https://bitbucket.org/", 0.16999999999999998 ] ], [ "http://www.blogger.com/", [ "http://img1.blogblog.com/", 0.16999999999999998 ] ], [ "http://www.google.com/", [ "http://ssl.gstatic.com/", 0.5675426961068906 ] ], [ "http://www.stylesen.org/", [ "http://stylesen.org/", 0.16999999999999998, "http://www.google-analytics.com/", 0.33999999999999997, "http://www.ohloh.net/", 0.16999999999999998 ] ], [ "https://bitbucket.org/", [ "https://bitbucket-assetroot.s3.amazonaws.com/", 0.51, "https://dwz7u9t8u8usb.cloudfront.net/", 13.939999999999996, "https://secure.gravatar.com/", 3.059999999999999, "https://ssl.google-analytics.com/", 3.399999999999999 ] ], [ "https://chauncey.unfuddle.com/", [ "https://ssl.google-analytics.com/", 0.33999999999999997 ] ], [ "https://chrome.google.com/", [ "https://lh3.googleusercontent.com/", 5.219415423423999, "https://lh4.googleusercontent.com/", 6.179726947551998, "https://lh5.googleusercontent.com/", 6.342838547551998, "https://lh6.googleusercontent.com/", 6.687539639967998, "https://plusone.google.com/", 0.596129227584, "https://ssl.google-analytics.com/", 2.9616457215359993, "https://ssl.gstatic.com/", 0.395803793088, "https://www.google.com/", 0.15532258896 ] ], [ "https://github.com/", [ "https://a248.e.akamai.net/", 14.167799999999998, "https://secure.gravatar.com/", 4.120799999999999, "https://ssl.google-analytics.com/", 0.9587999999999999 ] ] ],
+   "StartupDNSPrefetchList": [ 1, "http://crunchbanglinux.org/", "http://github.com/", "http://googleads.g.doubleclick.net/", "http://ocsp.thawte.com/", "http://owa.equityins.net:8910/", "http://pagead2.googlesyndication.com/", "http://tulsap522.equityins.net/", "http://www.google-analytics.com/", "http://www.google.com/", "https://tulsap522.equityins.net/" ],
+   "browser": {
+      "last_known_google_url": "http://www.google.com/",
+      "last_prompted_google_url": "http://www.google.com/",
+      "last_redirect_origin": "",
+      "window_placement": {
+         "bottom": 909,
+         "left": 2173,
+         "maximized": false,
+         "right": 3445,
+         "top": 30,
+         "work_area_bottom": 1020,
+         "work_area_left": 0,
+         "work_area_right": 1920,
+         "work_area_top": 1
+      }
+   },
+   "options_window": {
+      "last_tab_index": 0
+   },
+   "protocol_handler": {
+      "excluded_schemes": {
+         "afp": true,
+         "data": true,
+         "disk": true,
+         "disks": true,
+         "file": true,
+         "hcp": true,
+         "javascript": true,
+         "mailto": false,
+         "ms-help": true,
+         "news": false,
+         "nntp": true,
+         "shell": true,
+         "snews": false,
+         "vbscript": true,
+         "view-source": true,
+         "vnd": {
+            "ms": {
+               "radio": true
+            }
+         }
+      }
+   },
+   "safe_browsing": {
+      "client_key": "ZAN25bp8Rm3jQo330I7Wig==",
+      "wrapped_key": "AKEgNiuM8GQ261ZidFgWlqNnXIp9bMFxB5uPIc-lUoTmgVkFKZsk0Y99SVBTX6kpJgZ_O7ZwYKCWHPkxFWMGeGtW6MjKqTHI1Q=="
+   },
+   "show-minimal-first-run-bubble": true,
+   "show-welcome-page": true,
+   "shutdown": {
+      "num_processes": 0,
+      "num_processes_slow": 0,
+      "type": 0
+   },
+   "uninstall_metrics": {
+      "installation_date2": "1318944219",
+      "launch_count": "4"
+   },
+   "user_experience_metrics": {
+      "session_id": 3,
+      "stability": {
+         "breakpad_registration_fail": 4,
+         "breakpad_registration_ok": 0,
+         "crash_count": 0,
+         "debugger_not_present": 4,
+         "debugger_present": 0,
+         "exited_cleanly": false,
+         "incomplete_session_end_count": 0,
+         "last_timestamp_sec": "1319029847",
+         "launch_count": 4,
+         "launch_time_sec": "1319027747",
+         "page_load_count": 0,
+         "renderer_crash_count": 0,
+         "renderer_hang_count": 0,
+         "session_end_completed": true,
+         "stats_buildtime": "1295263638",
+         "stats_version": "9.0.597.45-64-devel"
+      }
+   }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html id="web-developer-options" lang="en"> 
+ 
+<head> 
+	<meta charset="utf-8"> 
+	<title>Web Developer Options</title> 
+	<link href="options.css" rel="stylesheet">
+	<link href="images/favicon.ico" rel="shortcut icon"> 
+</head> 
+ 
+<body> 
+
+<div id="header">
+	<h1>Web Developer Options</h1>
+</div>
+
+<div id="content">
+	<input type="checkbox" id="analytics" disabled>
+	<label for="analytics">Send anonymous information about which features are being used in the extension</label>
+	<strong>Analytics are disabled as they were causing issues for some users</strong>
+	(<a href="http://chrispederick.com/work/web-developer/chrome/privacy/#analytics">Privacy policy</a>)
+	
+	<div id="notification">
+		<span class="icon"></span>
+		<p>The options were saved successfully</p>
+	</div>
+	
+	<div id="buttons">
+		<input type="submit" value="Save" id="save" disabled>
+		<input type="submit" value="Cancel" id="cancel">
+	</div>
+</div>
+ 
+<script src="javascript/jquery.js"></script> 
+<script src="javascript/options.js"></script> 
+
+</body> 
+ 
+</html> 
+ 
