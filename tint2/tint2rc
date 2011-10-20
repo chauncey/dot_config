@@ -136,7 +136,7 @@ systray_icon_size = 24
 systray_icon_asb = 100 0 0
 
 # Clock
-time1_format = %H:%M:%S
+time1_format = %I:%M:%S
 time1_font = sans 8
 time2_format = %A %d %B
 time2_font = sans 6

@@ -32,7 +32,7 @@ tint2 &
 ## Note: cairo-compmgr prefers a sleep delay, else it tends to produce
 ## odd shadows/quirks around tint2 & Conky.
 #(sleep 10s && cb-compmgr --cairo-compmgr) &
-#cb-compmgr --xcompmgr & 
+cb-compmgr --xcompmgr & 
 
 ## Launch network manager applet
 (sleep 4s && nm-applet) &
@@ -47,7 +47,7 @@ fi
 xscreensaver -no-splash &
 
 ## Start Conky after a slight delay
-(sleep 3s && conky -q) &
+(sleep 7s && conky -q) &
 
 ## Start volumeicon after a slight delay
 (sleep 3s && volumeicon) &
@@ -78,5 +78,11 @@ cb-setxkbmap-live &
 (sleep 20s && gnome-do) &
 
 # config displays
-(sleep 20s && ~/.screenlayout/cb-work.sh) &
+(sleep 5s && ~/.screenlayout/cb-work.sh) &
+
+# Set mouse speed
+# xset m 7 10 &
+xset m 3 10 &
+# xset m default &
+# xset m 0 10 &
 
