@@ -1,9 +1,12 @@
 [global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   title_transmit_bg_color = "#000000"
-  title_inactive_bg_color = "#000000"
+  tab_position = hidden
   close_button_on_tab = False
+  title_inactive_bg_color = "#000000"
 [keybindings]
-  hide_window = <Shift><Control>a
+  next_tab = F3
+  hide_window = <Control>F12
 [profiles]
   [[default]]
     scrollbar_position = hidden
@@ -23,6 +26,7 @@
     [[[child1]]]
       type = Terminal
       parent = window0
+      profile = default
     [[[window0]]]
       type = Window
       parent = ""

@@ -86,3 +86,5 @@ xset m 3 10 &
 # xset m default &
 # xset m 0 10 &
 
+export GNOME_DESKTOP_SESSION_ID="openbox"
+

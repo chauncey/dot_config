@@ -12,7 +12,7 @@
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>
-					terminator
+          /home/chris/checkouts/dropdown/terminator
 				</execute>
 			</action>
 		</item>
@@ -271,6 +271,43 @@
 				</action>
 			</item>
 		</menu>
+    <menu id="Programming" label="Programming">
+		    <item label="gEdit">
+		        <action name="Execute">
+		            <execute>
+		                gedit
+		            </execute>
+		        </action>
+		    </item>
+		    <item label="gVim">
+		        <action name="Execute">
+		            <execute>
+		                gVim
+		            </execute>
+		        </action>
+		    </item>
+		    <item label="Komodo Edit 6">
+		        <action name="Execute">
+		            <execute>
+		                komodo
+		            </execute>
+		        </action>
+		    </item>
+		    <item label="Komodo Edit 7">
+		        <action name="Execute">
+		            <execute>
+                  /home/chris/Applications/Komodo-Edit-7/bin/komodo
+		            </execute>
+		        </action>
+		    </item>
+		    <item label="Komodo IDE 7">
+		        <action name="Execute">
+		            <execute>
+                  /home/chris/Applications/Komodo-IDE-7/bin/komodo
+		            </execute>
+		        </action>
+		    </item>
+    </menu>
 		<menu id="Utilities" label="Utilities">
 		    <item label="Pidgin">
 		        <action name="Execute">
