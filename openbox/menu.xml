@@ -207,7 +207,7 @@
 		  <item label="Firefox Browser">
 				<action name="Execute">
 					<execute>
-						firefox
+            /home/chris/Applications/firefox/firefox
 					</execute>
 				</action>
 			</item>
@@ -304,6 +304,20 @@
 		        <action name="Execute">
 		            <execute>
                   /home/chris/Applications/Komodo-IDE-7/bin/komodo
+		            </execute>
+		        </action>
+		    </item>
+		    <item label="Aptana Studio 3">
+		        <action name="Execute">
+		            <execute>
+                  /home/chris/bin/aptana
+		            </execute>
+		        </action>
+		    </item>
+		    <item label="Titanium Studio">
+		        <action name="Execute">
+		            <execute>
+                  '/home/chris/Applications/Titanium Studio/TitaniumStudio'
 		            </execute>
 		        </action>
 		    </item>
