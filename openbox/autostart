@@ -1,90 +1,47 @@
 ## Openbox autostart.sh
-## ====================
-## When you login to your CrunchBang Openbox session, this autostart script 
-## will be executed to set-up your environment and launch any applications
-## you want to run at startup.
-##
-## More information about this can be found at:
-## http://openbox.org/wiki/Help:Autostart
-##
-## If you do something cool with your autostart script and you think others
-## could benefit from your hack, please consider sharing it at:
-## http://crunchbanglinux.org/forums/
-##
-## Have fun! :)
 
-## Start session manager
-lxsession &
-
-## Enable power management
-xfce4-power-manager &
-
-## Start Thunar Daemon
-thunar --daemon &
-
-## Set desktop wallpaper
-nitrogen --restore &
-
-## Launch panel
+(sleep 3 && /usr/bin/nm-applet --sm-disable) &
 tint2 &
+volumeicon &
+#compton -b 
 
-## Enable Eyecandy - off by default, uncomment one of the commands below.
-## Note: cairo-compmgr prefers a sleep delay, else it tends to produce
-## odd shadows/quirks around tint2 & Conky.
-#(sleep 10s && cb-compmgr --cairo-compmgr) &
-cb-compmgr --xcompmgr & 
+## GNOME PolicyKit and Keyring
+eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg) &
 
-## Launch network manager applet
-(sleep 4s && nm-applet) &
+## Set root window colour
+hsetroot -solid "#2E3436" &
 
-## Detect and configure touchpad. See 'man synclient' for more info.
-if egrep -iq 'touchpad' /proc/bus/input/devices; then
-    synclient VertEdgeScroll=1 &
-    synclient TapButton1=1 &
-fi
+## Volume control for systray
+(sleep 2s && pnmixer) &
 
 ## Start xscreensaver
 xscreensaver -no-splash &
-
-## Start Conky after a slight delay
-(sleep 7s && conky -q) &
-
-## Start volumeicon after a slight delay
-(sleep 3s && volumeicon) &
+## Wallpaper
+(sleep 10s && nitrogen --restore) &
 
 ## Start Clipboard manager
-(sleep 3s && parcellite) &
+(sleep 3s && clipit) &
 
-## Bad Nautilus, minimises the impact of running Nautilus under
-## an Openbox session by applying some gconf settings. Safe to delete.
-cb-bad-nautilus &
+## Set keyboard settings - 250 ms delay and 25 cps (characters per second) repeat rate.
+## Adjust the values according to your preferances.
+xset r rate 250 25 &
 
-## The following command will set-up a keyboard map selection tool when
-## running in a live session.
-cb-setxkbmap-live &
+## Turn on/off system beep
+xset b off &
 
-## cb-fortune - have Statler say a little adage
-#(sleep 120s && cb-fortune) &
+## Run the conky
+#conky -q &
+(sleep 40s && conky.sh) &
 
-# pidgin
-(sleep 60s && pidgin) &
-
-
-# Autostart the Dropbox deamon
-(sleep 60s && ~/.dropbox-dist/dropboxd) &
-
-
-# gnome-do
-(sleep 20s && gnome-do) &
+# switch caps lock and escape
+xmodmap ~/dotfiles/.speedswapper
 
 # config displays
-(sleep 5s && ~/.screenlayout/cb-work.sh) &
+(sleep 3s && ~/dotfiles/.screenlayout/home.sh) &
 
-# Set mouse speed
-# xset m 7 10 &
-xset m 3 10 &
-# xset m default &
-# xset m 0 10 &
+# Autostart the Dropbox deamon
+(sleep 60s && dropbox) &
 
-export GNOME_DESKTOP_SESSION_ID="openbox"
-
+# natural scrolling with G700s
+(sleep 65s && xinput set-button-map 9 1 2 3 5 4 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20)
+(sleep 65s && xinput set-prop 9 290 1)

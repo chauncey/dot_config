@@ -1,29 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
   <menu id="root-menu" label="Openbox 3">
     <item label="Run Program">
       <action name="Execute">
-        <execute>
+        <command>
           gmrun
-        </execute>
+        </command>
       </action>
     </item>
     <separator/>
-    <item label="Terminal">
+    <item label="Terminator">
+      <action name="Execute">
+        <command>
+          terminator
+        </command>
+      </action>
+    </item>
+    <item label="Termite">
+      <action name="Execute">
+        <command>
+          termite
+        </command>
+      </action>
+    </item>
+    <item label="Urxvt">
       <action name="Execute">
         <execute>
-          /home/chris/checkouts/dropdown/terminator
+          ~/bin/rxvtstart.sh
         </execute>
       </action>
     </item>
-    <item label="Web Browser">
+    <item label="Chrome">
       <action name="Execute">
         <execute>
-          x-www-browser
+          <!-- google-chrome -->
+          chromium
         </execute>
       </action>
     </item>
-    <item label="File Manager">
+    <item label="Firefox">
+      <action name="Execute">
+        <execute>
+          firefox
+        </execute>
+      </action>
+    </item>
+    <item label="SpaceFM">
+      <action name="Execute">
+        <execute>
+          spacefm
+        </execute>
+      </action>
+    </item>
+    <item label="Thunar">
       <action name="Execute">
         <execute>
           thunar
@@ -32,292 +66,257 @@
     </item>
     <item label="Text Editor">
       <action name="Execute">
-        <execute>
+        <command>
           gvim
-        </execute>
+        </command>
       </action>
     </item>
-    <item label="Media Player">
+    <item label="Email">
       <action name="Execute">
-        <execute>
-          vlc
-        </execute>
+        <command>
+          nylas
+        </command>
       </action>
     </item>
     <separator/>
     <menu id="accessories" label="Accessories">
-        <item label="Catfish File Search">
+      <item label="Remmina">
         <action name="Execute">
-          <execute>
-            catfish
-          </execute>
+          <command>
+            remmina
+          </command>
         </action>
       </item>
         <item label="Archive Manager">
         <action name="Execute">
-          <execute>
+          <command>
             file-roller
-          </execute>
+          </command>
         </action>
       </item>
-      <item label="gvim Text Editor">
+      <item label="Geany Text Editor">
         <action name="Execute">
-          <execute>
-            gvim
-          </execute>
+          <command>
+            geany
+          </command>
+        </action>
+      </item>
+      <item label="Task Manager (htop)">
+        <action name="Execute">
+          <command>terminator --command=&quot;htop&quot;</command>
         </action>
       </item>
       <item label="Terminator Terminal">
         <action name="Execute">
-          <execute>
+          <command>
             terminator
-          </execute>
+          </command>
         </action>
       </item>
       <item label="Thunar File Manager">
         <action name="Execute">
-          <execute>
+          <command>
             thunar
-          </execute>
+          </command>
         </action>
       </item>
       <item label="Thunar File Manager (root)">
         <action name="Execute">
-          <execute>
+          <command>
             gksudo thunar
-          </execute>
+          </command>
         </action>
       </item>
     </menu>
-    <menu id="graphics" label="Graphics">
-        <item label="GIMP">
+    <menu id="eic" label="Equity">
+      <item label="TS-ServerDesktop">
         <action name="Execute">
-          <execute>
-            gimp
-          </execute>
+          <command>
+            rdesktop
+          </command>
         </action>
       </item>
-      <item label="Viewnior Image Viewer">
-        <action name="Execute">
-          <execute>
-            viewnior
-          </execute>
-        </action>
-      </item>
-        <menu id="graphicsScreenshots" label="Take Screenshot">
-        <item label="Now">
-          <action name="Execute">
-            <execute>
-              scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp; viewnior ~/images/$f'
-            </execute>
-          </action>
-        </item>
-        <item label="In 5 Seconds...">
-          <action name="Execute">
-            <execute>
-              scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp; viewnior ~/images/$f'
-            </execute>
-          </action>
-        </item>
-        <item label="In 10 Seconds...">
-          <action name="Execute">
-            <execute>
-              scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp; viewnior ~/images/$f'
-            </execute>
-          </action>
-        </item>
-        <item label="Selected Area... (click &amp; drag mouse)">
-          <action name="Execute">
-            <execute>
-              scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp; viewnior ~/images/$f'
-            </execute>
-          </action>
-        </item>
-      </menu>
-      <separator/>
-      <menu id="graphicsOnline" label="Online Tools">
-        <item label="Colour Lovers">
-          <action name="Execute">
-            <execute>
-              x-www-browser http://www.colourlovers.com/
-            </execute>
-          </action>
-        </item>
-        <item label="Color Hunter">
-          <action name="Execute">
-            <execute>
-              x-www-browser http://colorhunter.com/
-            </execute>
-          </action>
-        </item>
-        <item label="Vector Magic">
-          <action name="Execute">
-            <execute>
-              x-www-browser http://vectormagic.stanford.edu/
-            </execute>
-          </action>
-        </item>
-        <item label="FavIcon from Pics">
-          <action name="Execute">
-            <execute>
-              x-www-browser http://www.htmlkit.com/services/favicon/
-            </execute>
-          </action>
-        </item>
-      </menu>
     </menu>
     <menu id="multimedia" label="Multimedia">
-        <item label="VLC Media Player">
+        <item label="GNOME MPlayer">
         <action name="Execute">
-          <execute>
+          <command>
             vlc
-          </execute>
+          </command>
+        </action>
+      </item>
+      <item label="Gimp">
+        <action name="Execute">
+          <command>
+            gimp
+          </command>
+        </action>
+      </item>
+      <item label="Spotify">
+        <action name="Execute">
+          <command>
+            spotify
+          </command>
         </action>
       </item>
       <item label="Volume Control">
         <action name="Execute">
-          <execute>
-            xfce4-mixer
-          </execute>
+          <command>
+            pavucontrol
+          </command>
         </action>
       </item>
       <item label="Xfburn">
         <action name="Execute">
-          <execute>
+          <command>
             xfburn
-          </execute>
+          </command>
         </action>
       </item>
     </menu>
     <menu id="network" label="Network">
-      <item label="Chromium Browser">
+      <item label="Thunderbird">
         <action name="Execute">
-          <execute>
-            chromium-browser
-          </execute>
-        </action>
-      </item>
-      <item label="Chromium Browser (private mode)">
-        <action name="Execute">
-          <execute>
-            chromium-browser --incognito
-          </execute>
-        </action>
-      </item>
-      <item label="Firefox Browser">
-        <action name="Execute">
-          <execute>
-            /home/chris/Applications/firefox/firefox
-          </execute>
+          <command>
+            thunderbird
+          </command>
         </action>
       </item>
       <item label="gFTP Client">
         <action name="Execute">
-          <execute>
+          <command>
             gftp
-          </execute>
+          </command>
         </action>
       </item>
       <item label="Transmission BitTorrent Client">
         <action name="Execute">
-          <execute>
-            transmission
-          </execute>
+          <command>
+            transmission-gtk
+          </command>
         </action>
       </item>
       <item label="XChat IRC Client">
         <action name="Execute">
-          <execute>
+          <command>
             xchat
-          </execute>
+          </command>
         </action>
       </item>
-      <item label="Heybuddy Microblogging Client">
+      <item label="Remote Filesystems">
         <action name="Execute">
-          <execute>
-            heybuddy
-          </execute>
+          <command>
+            gigolo
+          </command>
         </action>
       </item>
+      <item label="putty">
+        <action name="Execute">
+          <command>
+            putty
+          </command>
+        </action>
+      </item>
+      <separator label="Services"/>
     </menu>
     <menu id="office" label="Office">
-        <menu id="openoffice" label="OpenOffice.org" execute="cb-openoffice.org-pipemenu" />
-        <item label="AbiWord Word Processor">
+        <item label="Google Docs">
         <action name="Execute">
-          <execute>
+          <command>
+            x-www-browser https://drive.google.com/
+          </command>
+        </action>
+      </item>
+      <item label="AbiWord Word Processor">
+        <action name="Execute">
+          <command>
             abiword
-          </execute>
+          </command>
         </action>
       </item>
       <item label="Gnumeric Spreadsheet">
         <action name="Execute">
-          <execute>
+          <command>
             gnumeric
-          </execute>
+          </command>
         </action>
       </item>
       <item label="Calculator">
         <action name="Execute">
-          <execute>
-            gnome-calculator
-          </execute>
+          <command>
+            galculator
+          </command>
         </action>
       </item>
       <item label="Evince PDF Viewer">
         <action name="Execute">
-          <execute>
+          <command>
             evince
-          </execute>
+          </command>
+        </action>
+      </item>
+      <item label="ProjectLibre">
+        <action name="Execute">
+          <command>
+            libreoffice
+          </command>
+        </action>
+      </item>
+      <item label="GanttProject">
+        <action name="Execute">
+          <command>
+            ganttproject
+          </command>
         </action>
       </item>
     </menu>
     <menu id="Programming" label="Programming">
-        <item label="gEdit">
-            <action name="Execute">
-                <execute>
-                    gedit
-                </execute>
-            </action>
-        </item>
         <item label="gVim">
             <action name="Execute">
                 <execute>
-                    gVim
+                    gvim
                 </execute>
             </action>
         </item>
-        <item label="Komodo Edit 6">
+        <item label="neovim">
             <action name="Execute">
                 <execute>
-                    komodo
+                    nvim
                 </execute>
             </action>
         </item>
-        <item label="Komodo Edit 7">
+        <item label="Sublime Text 3">
+            <action name="Execute">
+              <execute>
+                "/home/cc/Applications/sublime_text_3/sublime_text"
+              </execute>
+            </action>
+        </item>
+        <item label="Atom">
+            <action name="Execute">
+              <execute>
+                atom
+              </execute>
+            </action>
+        </item>
+        <item label="Sublime Text 2">
+            <action name="Execute">
+              <execute>
+                "/home/cc/Applications/Sublime Text 2/sublime_text"
+              </execute>
+            </action>
+        </item>
+        <item label="Git Cola">
             <action name="Execute">
                 <execute>
-                  /home/chris/Applications/Komodo-Edit-7/bin/komodo
+                    git cola
                 </execute>
             </action>
         </item>
-        <item label="Komodo IDE 7">
+        <item label="gitg">
             <action name="Execute">
                 <execute>
-                  /home/chris/Applications/Komodo-IDE-7/bin/komodo
-                </execute>
-            </action>
-        </item>
-        <item label="Aptana Studio 3">
-            <action name="Execute">
-                <execute>
-                  /home/chris/bin/aptana
-                </execute>
-            </action>
-        </item>
-        <item label="Titanium Studio">
-            <action name="Execute">
-                <execute>
-                  '/home/chris/Applications/Titanium Studio/TitaniumStudio'
+                    gitg
                 </execute>
             </action>
         </item>
@@ -330,6 +329,34 @@
                 </execute>
             </action>
         </item>
+        <item label="Tilda">
+            <action name="Execute">
+                <execute>
+                    tilda
+                </execute>
+            </action>
+        </item>
+        <item label="pgadmin">
+            <action name="Execute">
+                <execute>
+                    pgadmin3
+                </execute>
+            </action>
+        </item>
+        <item label="Wireshark">
+          <action name="Execute">
+            <execute>
+              wireshark
+            </execute>
+          </action>
+        </item>
+        <item label="Unetbootin">
+          <action name="Execute">
+            <execute>
+              gksudo unetbootin
+            </execute>
+          </action>
+        </item>
         <item label="VirtualBox">
         <action name="Execute">
           <execute>
@@ -338,114 +365,125 @@
         </action>
       </item>
     </menu>
-    <separator />
-    <menu id="recent" label="Recent Files" execute="~/.config/openbox/pipemenus/recently_opened_menu.sh" />
-    <menu id="places" label="Places" execute="~/.config/openbox/pipemenus/dash_places_menu.sh ~" />
-    <menu execute="cb-dropbox-pipemenu" id="dropbox" label="Dropbox"/>
     <separator/>
     <menu id="settings" label="Settings">
-      <menu execute="cb-compmgr" id="CompositingPipeMenu" label="Compositing"/>
-      <menu id="conkyconfig" label="Conky Config">
+      <menu id="conkyconfig" label="Conky">
         <item label="Edit .conkyrc">
           <action name="Execute">
-            <execute>
+            <command>
               gvim ~/.conkyrc
-            </execute>
+            </command>
           </action>
         </item>
         <item label="Restart Conky">
           <action name="Execute">
-            <execute>
+            <command>
               conkywonky
-            </execute>
+            </command>
           </action>
         </item>
         <separator label="Help?"/>
         <item label="man page">
           <action name="Execute">
-            <execute>
+            <command>
               terminator --command="man conky"
-            </execute>
+            </command>
           </action>
         </item>
         <item label="Wiki Page">
           <action name="Execute">
-            <execute>
+            <command>
               x-www-browser http://crunchbanglinux.org/wiki/conky
-            </execute>
+            </command>
           </action>
         </item>
       </menu>
-      <menu id="dmenuconfig" label="dmenu Config">
+      <menu id="dmenuconfig" label="dmenu">
         <item label="Edit start-up script">
           <action name="Execute">
-            <execute>
+            <command>
               gvim ~/.config/dmenu/dmenu-bind.sh
-            </execute>
+            </command>
           </action>
         </item>
         <separator label="Help?"/>
         <item label="man page">
           <action name="Execute">
-            <execute>
+            <command>
               terminator --command="man dmenu"
-            </execute>
+            </command>
           </action>
         </item>
       </menu>
-      <menu id="gmrunconfig" label="gmrun Config">
+      <menu id="gmrunconfig" label="gmrun">
         <item label="Edit config file">
           <action name="Execute">
-            <execute>
+            <command>
               gvim ~/.gmrunrc
-            </execute>
+            </command>
           </action>
         </item>
         <separator label="Help?"/>
         <item label="man page">
           <action name="Execute">
-            <execute>
+            <command>
               terminator --command="man gmrun"
-            </execute>
+            </command>
           </action>
         </item>
       </menu>
-      <menu id="obConfig" label="Openbox Config">
+      <menu id="obConfig" label="Openbox">
         <item label="Edit menu.xml">
           <action name="Execute">
-            <execute>
+            <command>
               gvim ~/.config/openbox/menu.xml
-            </execute>
+            </command>
           </action>
         </item>
         <item label="Edit rc.xml">
           <action name="Execute">
-            <execute>
+            <command>
               gvim ~/.config/openbox/rc.xml
-            </execute>
+            </command>
           </action>
         </item>
-        <item label="Edit autostart.sh">
+        <item label="Edit autostart">
           <action name="Execute">
-            <execute>
-              gvim ~/.config/openbox/autostart.sh
-            </execute>
+            <command>
+              gvim ~/.config/openbox/autostart
+            </command>
           </action>
         </item>
+        <separator/>
         <item label="GUI Menu Editor">
           <action name="Execute">
-            <execute>
+            <command>
               obmenu
-            </execute>
+            </command>
+          </action>
+        </item>
+        <item label="GUI Applications Settings Editor">
+          <action name="Execute">
+            <command>
+              obapps
+            </command>
           </action>
         </item>
         <item label="GUI Config Tool">
           <action name="Execute">
-            <execute>
+            <command>
               obconf
-            </execute>
+            </command>
           </action>
         </item>
+        <item label="LXAppearance">
+          <action name="Execute">
+            <command>
+              lxappearance
+            </command>
+          </action>
+        </item>
+        <separator/>
         <item label="Reconfigure">
           <action name="Reconfigure"/>
         </item>
@@ -453,161 +491,143 @@
           <action name="Restart"/>
         </item>
       </menu>
-      <menu id="terminatorconfig" label="Terminator Config">
+      <menu id="terminatorconfig" label="Terminator">
         <item label="Edit config file">
           <action name="Execute">
-            <execute>
+            <command>
               gvim ~/.config/terminator/config
-            </execute>
+            </command>
           </action>
         </item>
         <separator label="Help?"/>
         <item label="man page">
           <action name="Execute">
-            <execute>
+            <command>
               terminator --command="man terminator_config"
-            </execute>
+            </command>
           </action>
         </item>
       </menu>
-      <menu id="tint2config" label="tint2 Panel Config">
+      <menu id="tint2config" label="tint2">
         <item label="Edit config file">
           <action name="Execute">
-            <execute>
+            <command>
               gvim ~/.config/tint2/tint2rc
-            </execute>
+            </command>
           </action>
         </item>
-        <item label="GUI Config Tool">
+                <item label="Restart tint2">
           <action name="Execute">
-            <execute>
-              tint2conf
-            </execute>
+            <command>
+              tint2restart
+            </command>
           </action>
         </item>
         <separator label="Help?"/>
         <item label="man page">
           <action name="Execute">
-            <execute>
+            <command>
               terminator --command="man tint2"
-            </execute>
+            </command>
           </action>
         </item>
         <item label="Online Help">
           <action name="Execute">
-            <execute>
+            <command>
               x-www-browser http://code.google.com/p/tint2/wiki/Welcome
-            </execute>
+            </command>
           </action>
         </item>
       </menu>
       <menu id="DisplaySettings" label="Display Settings">
-          <item label="Adjust with grandr">
+          <item label="ARandR Screen Layout Editor">
             <action name="Execute">
-              <execute>
-                grandr
-              </execute>
+              <command>
+                arandr
+              </command>
             </action>
           </item>
           <separator label="Help?"/>
           <item label="man xrandr">
             <action name="Execute">
-              <execute>
+              <command>
                 terminator --command="man xrandr"
-              </execute>
-            </action>
-          </item>
-      </menu>
-      <menu id="NotificationsSettings" label="Notifications">
-          <item label="Edit config file">
-            <action name="Execute">
-              <execute>
-                gvim ~/.notify-osd
-              </execute>
-            </action>
-          </item>
-          <item label="Send test notification">
-            <action name="Execute">
-              <execute>
-                cb-fortune
-              </execute>
+              </command>
             </action>
           </item>
       </menu>
       <item label="Edit Default Applications">
         <action name="Execute">
-          <execute>
+          <command>
             terminator --command="sudo update-alternatives --all"
-          </execute>
+          </command>
         </action>
       </item>
       <item label="User Interface Settings">
         <action name="Execute">
-          <execute>
+          <command>
             lxappearance
-          </execute>
+          </command>
         </action>
       </item>
       <item label="Power Management">
         <action name="Execute">
-          <execute>
+          <command>
             xfce4-power-manager-settings
-          </execute>
+          </command>
         </action>
       </item>
       <item label="Screensaver">
         <action name="Execute">
-          <execute>
+          <command>
             xscreensaver-demo
-          </execute>
+          </command>
         </action>
       </item>
       <item label="Choose Wallpaper">
         <action name="Execute">
-          <execute>
+          <command>
             nitrogen ~/images/wallpapers/
-          </execute>
+          </command>
         </action>
       </item>
     </menu>
     <menu id="system" label="System">
-        <menu execute="cb-printing-pipemenu" id="PrintingPipeMenu" label="Printers"/>
         <item label="GParted">
         <action name="Execute">
-          <execute>
+          <command>
             gksudo gparted
-          </execute>
-        </action>
-      </item>
-      <item label="GDM Login Set-up">
-        <action name="Execute">
-          <execute>
-            gksudo gdmsetup
-          </execute>
+          </command>
         </action>
       </item>
       <item label="Synaptic Package Manager">
         <action name="Execute">
-          <execute>
+          <command>
             gksudo synaptic
-          </execute>
+          </command>
+        </action>
+      </item>
+      <item label="User Login Settings">
+        <action name="Execute">
+          <command>
+            gksudo slimconf
+          </command>
         </action>
       </item>
     </menu>
-    <menu id="help" label="Help" execute="cb-help-pipemenu" />
     <separator/>
     <item label="Lock Screen">
       <action name="Execute">
-        <execute>
-          cb-lock
-        </execute>
+        <command>
+          xscreensaver-command -lock
+        </command>
       </action>
     </item>
     <item label="Exit">
       <action name="Execute">
-        <execute>
-          openbox-logout
-        </execute>
+        <command>
+          cb-exit
+        </command>
       </action>
     </item>
   </menu>
